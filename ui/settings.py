@@ -2,8 +2,8 @@
 
 # Form implementation generated from reading ui file 'ui/settings.ui'
 #
-# Created: Tue Jul 10 19:00:30 2012
-#      by: PyQt4 UI code generator 4.9.1
+# Created: Thu Jul 24 04:15:28 2014
+#      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -12,7 +12,16 @@ from PyQt4 import QtCore, QtGui
 try:
     _fromUtf8 = QtCore.QString.fromUtf8
 except AttributeError:
-    _fromUtf8 = lambda s: s
+    def _fromUtf8(s):
+        return s
+
+try:
+    _encoding = QtGui.QApplication.UnicodeUTF8
+    def _translate(context, text, disambig):
+        return QtGui.QApplication.translate(context, text, disambig, _encoding)
+except AttributeError:
+    def _translate(context, text, disambig):
+        return QtGui.QApplication.translate(context, text, disambig)
 
 class Ui_SettingsTabWidget(object):
     def setupUi(self, SettingsTabWidget):
@@ -151,25 +160,25 @@ class Ui_SettingsTabWidget(object):
         SettingsTabWidget.setTabOrder(self.plainTextEditOptions, self.plainTextEditService)
 
     def retranslateUi(self, SettingsTabWidget):
-        SettingsTabWidget.setWindowTitle(QtGui.QApplication.translate("SettingsTabWidget", "Settings", None, QtGui.QApplication.UnicodeUTF8))
-        self.databasesTreeWidget.headerItem().setText(0, QtGui.QApplication.translate("SettingsTabWidget", "Name", None, QtGui.QApplication.UnicodeUTF8))
-        self.databasesTreeWidget.headerItem().setText(1, QtGui.QApplication.translate("SettingsTabWidget", "Host", None, QtGui.QApplication.UnicodeUTF8))
-        self.databasesTreeWidget.headerItem().setText(2, QtGui.QApplication.translate("SettingsTabWidget", "Port", None, QtGui.QApplication.UnicodeUTF8))
-        self.databasesTreeWidget.headerItem().setText(3, QtGui.QApplication.translate("SettingsTabWidget", "User", None, QtGui.QApplication.UnicodeUTF8))
-        self.buttonDelete.setText(QtGui.QApplication.translate("SettingsTabWidget", "-", None, QtGui.QApplication.UnicodeUTF8))
-        self.buttonAdd.setText(QtGui.QApplication.translate("SettingsTabWidget", "+", None, QtGui.QApplication.UnicodeUTF8))
-        self.groupBoxDatabase.setTitle(QtGui.QApplication.translate("SettingsTabWidget", "Database", None, QtGui.QApplication.UnicodeUTF8))
-        self.labelRequireSSL.setText(QtGui.QApplication.translate("SettingsTabWidget", "Require SSL", None, QtGui.QApplication.UnicodeUTF8))
-        self.labelOptions.setText(QtGui.QApplication.translate("SettingsTabWidget", "Options", None, QtGui.QApplication.UnicodeUTF8))
-        self.labelConnectTimeout.setText(QtGui.QApplication.translate("SettingsTabWidget", "Connect Timeout", None, QtGui.QApplication.UnicodeUTF8))
-        self.labelUser.setText(QtGui.QApplication.translate("SettingsTabWidget", "User", None, QtGui.QApplication.UnicodeUTF8))
-        self.labelName.setText(QtGui.QApplication.translate("SettingsTabWidget", "Name", None, QtGui.QApplication.UnicodeUTF8))
-        self.labelHost.setText(QtGui.QApplication.translate("SettingsTabWidget", "Host", None, QtGui.QApplication.UnicodeUTF8))
-        self.labelPass.setText(QtGui.QApplication.translate("SettingsTabWidget", "Pass", None, QtGui.QApplication.UnicodeUTF8))
-        self.labelService.setText(QtGui.QApplication.translate("SettingsTabWidget", "Service", None, QtGui.QApplication.UnicodeUTF8))
-        self.labelPort.setText(QtGui.QApplication.translate("SettingsTabWidget", "Port", None, QtGui.QApplication.UnicodeUTF8))
-        self.buttonTest.setText(QtGui.QApplication.translate("SettingsTabWidget", "Test settings", None, QtGui.QApplication.UnicodeUTF8))
-        SettingsTabWidget.setTabText(SettingsTabWidget.indexOf(self.tabDatabases), QtGui.QApplication.translate("SettingsTabWidget", "Databases", None, QtGui.QApplication.UnicodeUTF8))
+        SettingsTabWidget.setWindowTitle(_translate("SettingsTabWidget", "Settings", None))
+        self.databasesTreeWidget.headerItem().setText(0, _translate("SettingsTabWidget", "Name", None))
+        self.databasesTreeWidget.headerItem().setText(1, _translate("SettingsTabWidget", "Host", None))
+        self.databasesTreeWidget.headerItem().setText(2, _translate("SettingsTabWidget", "Port", None))
+        self.databasesTreeWidget.headerItem().setText(3, _translate("SettingsTabWidget", "User", None))
+        self.buttonDelete.setText(_translate("SettingsTabWidget", "-", None))
+        self.buttonAdd.setText(_translate("SettingsTabWidget", "+", None))
+        self.groupBoxDatabase.setTitle(_translate("SettingsTabWidget", "Database", None))
+        self.labelRequireSSL.setText(_translate("SettingsTabWidget", "Require SSL", None))
+        self.labelOptions.setText(_translate("SettingsTabWidget", "Options", None))
+        self.labelConnectTimeout.setText(_translate("SettingsTabWidget", "Connect Timeout", None))
+        self.labelUser.setText(_translate("SettingsTabWidget", "User", None))
+        self.labelName.setText(_translate("SettingsTabWidget", "Name", None))
+        self.labelHost.setText(_translate("SettingsTabWidget", "Host", None))
+        self.labelPass.setText(_translate("SettingsTabWidget", "Pass", None))
+        self.labelService.setText(_translate("SettingsTabWidget", "Service", None))
+        self.labelPort.setText(_translate("SettingsTabWidget", "Port", None))
+        self.buttonTest.setText(_translate("SettingsTabWidget", "Test settings", None))
+        SettingsTabWidget.setTabText(SettingsTabWidget.indexOf(self.tabDatabases), _translate("SettingsTabWidget", "Databases", None))
 
 
 if __name__ == "__main__":

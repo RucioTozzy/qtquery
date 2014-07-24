@@ -2,8 +2,8 @@
 
 # Form implementation generated from reading ui file 'ui/main.ui'
 #
-# Created: Tue Jul 10 19:00:30 2012
-#      by: PyQt4 UI code generator 4.9.1
+# Created: Thu Jul 24 04:15:28 2014
+#      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -12,7 +12,16 @@ from PyQt4 import QtCore, QtGui
 try:
     _fromUtf8 = QtCore.QString.fromUtf8
 except AttributeError:
-    _fromUtf8 = lambda s: s
+    def _fromUtf8(s):
+        return s
+
+try:
+    _encoding = QtGui.QApplication.UnicodeUTF8
+    def _translate(context, text, disambig):
+        return QtGui.QApplication.translate(context, text, disambig, _encoding)
+except AttributeError:
+    def _translate(context, text, disambig):
+        return QtGui.QApplication.translate(context, text, disambig)
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -234,54 +243,54 @@ class Ui_MainWindow(object):
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
-        MainWindow.setWindowTitle(QtGui.QApplication.translate("MainWindow", "QtQuery", None, QtGui.QApplication.UnicodeUTF8))
-        self.menuQuery.setTitle(QtGui.QApplication.translate("MainWindow", "Query", None, QtGui.QApplication.UnicodeUTF8))
-        self.menuFile.setTitle(QtGui.QApplication.translate("MainWindow", "File", None, QtGui.QApplication.UnicodeUTF8))
-        self.menuWindows.setTitle(QtGui.QApplication.translate("MainWindow", "Windows", None, QtGui.QApplication.UnicodeUTF8))
-        self.menuEdit.setTitle(QtGui.QApplication.translate("MainWindow", "Edit", None, QtGui.QApplication.UnicodeUTF8))
-        self.dockWidgetDataOutput.setWindowTitle(QtGui.QApplication.translate("MainWindow", "Data Output", None, QtGui.QApplication.UnicodeUTF8))
-        self.toolBar.setWindowTitle(QtGui.QApplication.translate("MainWindow", "Main Toolbar", None, QtGui.QApplication.UnicodeUTF8))
-        self.dockWidgetMessages.setWindowTitle(QtGui.QApplication.translate("MainWindow", "Messages", None, QtGui.QApplication.UnicodeUTF8))
-        self.dockWidgetDatabaseLayout.setWindowTitle(QtGui.QApplication.translate("MainWindow", "Database Layout", None, QtGui.QApplication.UnicodeUTF8))
-        self.treeWidgetDatabaseLayout.headerItem().setText(1, QtGui.QApplication.translate("MainWindow", "Size", None, QtGui.QApplication.UnicodeUTF8))
-        self.dockWidgetDocumentation.setWindowTitle(QtGui.QApplication.translate("MainWindow", "Documentation", None, QtGui.QApplication.UnicodeUTF8))
-        self.toolButtonStop.setText(QtGui.QApplication.translate("MainWindow", "Stop", None, QtGui.QApplication.UnicodeUTF8))
-        self.toolButtonReload.setText(QtGui.QApplication.translate("MainWindow", "Reload", None, QtGui.QApplication.UnicodeUTF8))
-        self.toolButtonBackward.setText(QtGui.QApplication.translate("MainWindow", "Backward", None, QtGui.QApplication.UnicodeUTF8))
-        self.toolButtonForward.setText(QtGui.QApplication.translate("MainWindow", "Forward", None, QtGui.QApplication.UnicodeUTF8))
-        self.toolButtonGo.setText(QtGui.QApplication.translate("MainWindow", "...", None, QtGui.QApplication.UnicodeUTF8))
-        self.actionExecute.setText(QtGui.QApplication.translate("MainWindow", "Execute", None, QtGui.QApplication.UnicodeUTF8))
-        self.actionExecute.setShortcut(QtGui.QApplication.translate("MainWindow", "F5", None, QtGui.QApplication.UnicodeUTF8))
-        self.actionExplainAnalyze.setText(QtGui.QApplication.translate("MainWindow", "Explain: Analyze", None, QtGui.QApplication.UnicodeUTF8))
-        self.actionExplain.setText(QtGui.QApplication.translate("MainWindow", "Explain", None, QtGui.QApplication.UnicodeUTF8))
-        self.actionExplain.setShortcut(QtGui.QApplication.translate("MainWindow", "F7", None, QtGui.QApplication.UnicodeUTF8))
-        self.actionFormat.setText(QtGui.QApplication.translate("MainWindow", "Format", None, QtGui.QApplication.UnicodeUTF8))
-        self.actionFormat.setShortcut(QtGui.QApplication.translate("MainWindow", "Ctrl+Shift+F", None, QtGui.QApplication.UnicodeUTF8))
-        self.actionNew.setText(QtGui.QApplication.translate("MainWindow", "New", None, QtGui.QApplication.UnicodeUTF8))
-        self.actionNew.setShortcut(QtGui.QApplication.translate("MainWindow", "Ctrl+N", None, QtGui.QApplication.UnicodeUTF8))
-        self.actionOpen.setText(QtGui.QApplication.translate("MainWindow", "Open...", None, QtGui.QApplication.UnicodeUTF8))
-        self.actionOpen.setShortcut(QtGui.QApplication.translate("MainWindow", "Ctrl+O", None, QtGui.QApplication.UnicodeUTF8))
-        self.actionSave.setText(QtGui.QApplication.translate("MainWindow", "Save", None, QtGui.QApplication.UnicodeUTF8))
-        self.actionSave.setShortcut(QtGui.QApplication.translate("MainWindow", "Ctrl+S", None, QtGui.QApplication.UnicodeUTF8))
-        self.actionSaveAs.setText(QtGui.QApplication.translate("MainWindow", "Save As...", None, QtGui.QApplication.UnicodeUTF8))
-        self.actionSaveAs.setShortcut(QtGui.QApplication.translate("MainWindow", "Ctrl+Shift+S", None, QtGui.QApplication.UnicodeUTF8))
-        self.actionSettings.setText(QtGui.QApplication.translate("MainWindow", "Settings", None, QtGui.QApplication.UnicodeUTF8))
-        self.actionDatabaseLayout.setText(QtGui.QApplication.translate("MainWindow", "Database Layout", None, QtGui.QApplication.UnicodeUTF8))
-        self.actionDataOutput.setText(QtGui.QApplication.translate("MainWindow", "Data Output", None, QtGui.QApplication.UnicodeUTF8))
-        self.actionMessages.setText(QtGui.QApplication.translate("MainWindow", "Messages", None, QtGui.QApplication.UnicodeUTF8))
-        self.actionDocumentation.setText(QtGui.QApplication.translate("MainWindow", "Documentation", None, QtGui.QApplication.UnicodeUTF8))
-        self.actionExit.setText(QtGui.QApplication.translate("MainWindow", "Quit", None, QtGui.QApplication.UnicodeUTF8))
-        self.actionExit.setShortcut(QtGui.QApplication.translate("MainWindow", "Ctrl+Q", None, QtGui.QApplication.UnicodeUTF8))
-        self.actionUnindent.setText(QtGui.QApplication.translate("MainWindow", "Unindent", None, QtGui.QApplication.UnicodeUTF8))
-        self.actionIndent.setText(QtGui.QApplication.translate("MainWindow", "Indent", None, QtGui.QApplication.UnicodeUTF8))
-        self.actionCut.setText(QtGui.QApplication.translate("MainWindow", "Cut", None, QtGui.QApplication.UnicodeUTF8))
-        self.actionCopy.setText(QtGui.QApplication.translate("MainWindow", "Copy", None, QtGui.QApplication.UnicodeUTF8))
-        self.actionPaste.setText(QtGui.QApplication.translate("MainWindow", "Paste", None, QtGui.QApplication.UnicodeUTF8))
-        self.actionComment.setText(QtGui.QApplication.translate("MainWindow", "Comment", None, QtGui.QApplication.UnicodeUTF8))
-        self.actionComment.setShortcut(QtGui.QApplication.translate("MainWindow", "Ctrl+/", None, QtGui.QApplication.UnicodeUTF8))
-        self.actionUncomment.setText(QtGui.QApplication.translate("MainWindow", "Uncomment", None, QtGui.QApplication.UnicodeUTF8))
-        self.actionUncomment.setShortcut(QtGui.QApplication.translate("MainWindow", "Ctrl+?", None, QtGui.QApplication.UnicodeUTF8))
+        MainWindow.setWindowTitle(_translate("MainWindow", "QtQuery", None))
+        self.menuQuery.setTitle(_translate("MainWindow", "Query", None))
+        self.menuFile.setTitle(_translate("MainWindow", "File", None))
+        self.menuWindows.setTitle(_translate("MainWindow", "Windows", None))
+        self.menuEdit.setTitle(_translate("MainWindow", "Edit", None))
+        self.dockWidgetDataOutput.setWindowTitle(_translate("MainWindow", "Data Output", None))
+        self.toolBar.setWindowTitle(_translate("MainWindow", "Main Toolbar", None))
+        self.dockWidgetMessages.setWindowTitle(_translate("MainWindow", "Messages", None))
+        self.dockWidgetDatabaseLayout.setWindowTitle(_translate("MainWindow", "Database Layout", None))
+        self.treeWidgetDatabaseLayout.headerItem().setText(1, _translate("MainWindow", "Size", None))
+        self.dockWidgetDocumentation.setWindowTitle(_translate("MainWindow", "Documentation", None))
+        self.toolButtonStop.setText(_translate("MainWindow", "Stop", None))
+        self.toolButtonReload.setText(_translate("MainWindow", "Reload", None))
+        self.toolButtonBackward.setText(_translate("MainWindow", "Backward", None))
+        self.toolButtonForward.setText(_translate("MainWindow", "Forward", None))
+        self.toolButtonGo.setText(_translate("MainWindow", "...", None))
+        self.actionExecute.setText(_translate("MainWindow", "Execute", None))
+        self.actionExecute.setShortcut(_translate("MainWindow", "F5", None))
+        self.actionExplainAnalyze.setText(_translate("MainWindow", "Explain: Analyze", None))
+        self.actionExplain.setText(_translate("MainWindow", "Explain", None))
+        self.actionExplain.setShortcut(_translate("MainWindow", "F7", None))
+        self.actionFormat.setText(_translate("MainWindow", "Format", None))
+        self.actionFormat.setShortcut(_translate("MainWindow", "Ctrl+Shift+F", None))
+        self.actionNew.setText(_translate("MainWindow", "New", None))
+        self.actionNew.setShortcut(_translate("MainWindow", "Ctrl+N", None))
+        self.actionOpen.setText(_translate("MainWindow", "Open...", None))
+        self.actionOpen.setShortcut(_translate("MainWindow", "Ctrl+O", None))
+        self.actionSave.setText(_translate("MainWindow", "Save", None))
+        self.actionSave.setShortcut(_translate("MainWindow", "Ctrl+S", None))
+        self.actionSaveAs.setText(_translate("MainWindow", "Save As...", None))
+        self.actionSaveAs.setShortcut(_translate("MainWindow", "Ctrl+Shift+S", None))
+        self.actionSettings.setText(_translate("MainWindow", "Settings", None))
+        self.actionDatabaseLayout.setText(_translate("MainWindow", "Database Layout", None))
+        self.actionDataOutput.setText(_translate("MainWindow", "Data Output", None))
+        self.actionMessages.setText(_translate("MainWindow", "Messages", None))
+        self.actionDocumentation.setText(_translate("MainWindow", "Documentation", None))
+        self.actionExit.setText(_translate("MainWindow", "Quit", None))
+        self.actionExit.setShortcut(_translate("MainWindow", "Ctrl+Q", None))
+        self.actionUnindent.setText(_translate("MainWindow", "Unindent", None))
+        self.actionIndent.setText(_translate("MainWindow", "Indent", None))
+        self.actionCut.setText(_translate("MainWindow", "Cut", None))
+        self.actionCopy.setText(_translate("MainWindow", "Copy", None))
+        self.actionPaste.setText(_translate("MainWindow", "Paste", None))
+        self.actionComment.setText(_translate("MainWindow", "Comment", None))
+        self.actionComment.setShortcut(_translate("MainWindow", "Ctrl+/", None))
+        self.actionUncomment.setText(_translate("MainWindow", "Uncomment", None))
+        self.actionUncomment.setShortcut(_translate("MainWindow", "Ctrl+?", None))
 
-from PyQt4 import QtWebKit
 from PyQt4 import Qsci
+from PyQt4 import QtWebKit
 import resources_rc
