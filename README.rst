@@ -21,5 +21,13 @@ Requirements:
 
  - PyQt4
  - QScintilla
+ - sqlparse
 
+To install and run on OS X:
 
+..
+
+    git clone https://github.com/WoLpH/qtquery.git
+    brew install qscintilla2 pyqt
+    pip install sqlparse
+    python qtquery/main.py
