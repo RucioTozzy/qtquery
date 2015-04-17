@@ -10,9 +10,13 @@ conveniences such as:
  - Built-in documentation browser
 
 
- To run simply run `python main.py`.
+ To run simply run
+ 
+ ..
+ 
+    python main.py
 
- Requirements:
+Requirements:
 =====================
 
  - PyQt4
